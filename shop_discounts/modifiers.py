@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from decimal import Decimal
-from django.db.models import Q, Max
+from django.db.models import Q
 from django.utils.translation import ugettext_lazy as _
 from shop.modifiers.base import BaseCartModifier
 from shop.rest.serializers import ExtraCartRow
-from shop_rebates.models import CustomerRebate
+from shop_discounts.models import CustomerRebate
 
 
 class CustomerRebateModifier(BaseCartModifier):
@@ -23,7 +22,7 @@ class CustomerRebateModifier(BaseCartModifier):
             if queryset:
                 rebate = queryset.order_by('percentage').last()
                 amount = - cart.total * rebate.percentage / 100
-                label = _("{percentage:.0f}% rebate for {rebate}").format(percentage=rebate.percentage,
+                label = _("{percentage:.0f}%% rebate for {rebate}").format(percentage=rebate.percentage,
                                                                       rebate=str(rebate))
                 cart.extra_rows[self.identifier] = ExtraCartRow({'label': label, 'amount': amount})
                 cart.total += amount

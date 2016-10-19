@@ -1,4 +1,4 @@
 include LICENSE
 include README.md
-recursive-include shop_rebates *
+recursive-include shop_discounts *
 recursive-exclude * *.pyc

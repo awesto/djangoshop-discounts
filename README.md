@@ -5,14 +5,14 @@ This integration only works for django-SHOP version 0.9 and above.
 
 ## Installation
 
-In ``settings.py`` add ``'shop_rebates'`` to ``INSTALLED_APPS``.
+In ``settings.py`` add ``'shop_discounts'`` to ``INSTALLED_APPS``.
 
 Additionally add to
 
 ```
 SHOP_CART_MODIFIERS = (
     ...
-    'shop_rebates.modifiers.CustomerRebateModifier',
+    'shop_discounts.modifiers.CustomerRebateModifier',
     ...
 )
 ```

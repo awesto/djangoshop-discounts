@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from setuptools import setup, find_packages
-import shop_rebates
+import shop_discounts
 try:
     from pypandoc import convert
 except ImportError:
@@ -24,11 +24,11 @@ CLASSIFIERS = [
 setup(
     author="Jacob Rief",
     author_email="jacob.rief@gmail.com",
-    name='djangoshop-rebates',
-    version=shop_rebates.__version__,
-    description="Customer rebates for django-shop",
+    name='djangoshop-discounts',
+    version=shop_discounts.__version__,
+    description="Discounts for elected customers in django-SHOP",
     long_description=convert('README.md', 'rst'),
-    url='https://github.com/jrief/djangoshop-rebates',
+    url='https://github.com/jrief/djangoshop-discounts',
     license='MIT License',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
