@@ -19,7 +19,7 @@ SHOP_CART_MODIFIERS = (
 
 The discount is computed using the *current* subtotal, then withdrawn from thereof. 
 Therefore the position of this rebate modifier is important. Add it after the ``DefaultCartModifier``,
-but before your choosen tax modifier. 
+but before your chosen tax modifier. 
 
 
 ## Usage
